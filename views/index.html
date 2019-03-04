@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie Library</title>
 
-    <link rel="stylesheet" type="text/css" href="../../public/assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../../public/assets/css/style.css">
+  
+    <!-- favicon -->
+  <link rel="shortcut icon" href="../public/assets/images/favicon_img.png">
+    <!-- favicon -->
+
 </head>
+
 <body>
 
 
-    <form id ='addMov'>
-        Find Movie: <br>
+    <form id='movieSearch'>
+        Movie Search: <br>
         <input type="text" name="Movie_Title" id="movSearch" placeholder="Movie Title">
-        <input type="submit" value="Search" id="find"> 
+        <input type="submit" value="Search" id="find">
     </form>
-    
-    
+
+    <div class="movieContainer">Movie:
+
+    </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../../public/assets/javascript/omdb_api.js"></script>
+    <script src="assets/javascript/omdbSearch.js"></script>
 </body>
+
 </html>
