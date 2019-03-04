@@ -1,2 +1,2 @@
-CREATE DATABASE greg_media_db;
+CREATE DATABASE media_db;
 USE media_db
