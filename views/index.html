@@ -17,10 +17,10 @@
 <body>
 
 
-    <form id='movieSearch'>
+    <form id='movieSearch' method="POST" action="/api/omdb">
         Movie Search: <br>
-        <input type="text" name="Movie_Title" id="movSearch" placeholder="Movie Title">
-        <input type="submit" value="Search" id="find">
+        <input type="text" name="movieTitle" id="movSearch" placeholder="Movie Title">
+        <button type="submit" value="Search" id="find">
     </form>
 
     <div class="movieContainer">Movie:

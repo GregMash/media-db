@@ -1,23 +1,27 @@
-// require dependencies
-const dotenv = require("dotenv").config();
+// Dependencies
+require("dotenv").config();
 const express = require("express");
-// set up port
-const PORT = process.env.PORT || 7777;
-
+const mongoose = require("mongoose");
+const routes = require("./routes");
 const app = express();
-// serve all static files from the public directory
-app.use(express.static("public"));
+const PORT = process.env.PORT || 3001;
 
-// parse application body as JSON
+// Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Routes
-// =============================================================
-require("./routes/html-routes")(app);
-require("./routes/omdb-routes")(app);
+// Serve up static assets (heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+};
 
-//listener
-app.listen(PORT, () => {
-    console.log(`Server listening on : http://localhost:${PORT}`);
+// Add routes, both API and view
+app.use(routes);
+
+// Connect to Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mediaDB");
+
+// Start the API server
+app.listen(PORT, function() {
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

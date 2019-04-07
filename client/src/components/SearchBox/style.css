@@ -1,0 +1,15 @@
+.book-search {
+    margin: auto;
+    border: 2px solid black;
+    padding: 8% 5% 2% 5%;
+    width: 95%;
+}
+
+.search-starter {
+    padding: 1%;
+    width: 45%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+

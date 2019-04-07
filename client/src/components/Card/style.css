@@ -1,0 +1,30 @@
+.card-img-top {
+    width: 25%;
+    align-self: left;
+    float: left;
+    padding-right: 3%
+}
+
+.card-body {
+    margin: 4% 1% 0% 1%;
+}
+
+.card {
+    align-self: center;
+    width: 95%;
+    margin: auto;
+    margin: 4% 2% 4% 2%;
+}
+
+.card-button {
+    position: absolute;
+    right: 0;
+    width: 35%;
+    padding: 1%;
+    border: 1px solid black;
+}
+
+.card-link {
+    border: 1px solid black;
+    padding: 1%;
+}
