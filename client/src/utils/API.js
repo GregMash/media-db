@@ -33,5 +33,8 @@ export default {
     // Delete a book
     deleteMovie: function (id) {
         return axios.delete(`/api/movies/${id}`);
+    },
+    searchVideoGame: function () {
+        return axios.post("api/videogames/search");
     }
 };

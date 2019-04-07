@@ -1,17 +1,17 @@
 const router = require("express").Router();
-const moviesController = require("../../controllers/moviesController");
+const vidGamesController = require("../../controllers/vidGamesController");
 
 // Matches with "/api/movies"
 router.route("/")
-  .get(moviesController.findAll)
-  .post(moviesController.create);
+  .get(vidGamesController.findAll)
+  .post(vidGamesController.create);
 
 // Matches with "/api/movies/search"
 router.route("/search")
-  .post(moviesController.omdbSearch)
+  .post(vidGamesController.igdbSearch)
 
 // Matches with "/api/movies/:id"
 router.route("/:id")
-  .delete(moviesController.remove);
+  .delete(vidGamesController.remove);
 
 module.exports = router;

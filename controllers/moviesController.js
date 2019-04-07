@@ -31,24 +31,3 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   }
 }; 
-
-
-// module.exports = (app) => {
-
-//   app.post("/api/movies", (req, res) => {
-//       if (typeof req.body.movieTitle === "undefined") {
-//           res.status(400).json({ error: "missing parameter movie search", data: null})
-//           return;
-//       }
-     
-//       const queryURL = `http://www.omdbapi.com/?t=${movieName}&y=&plot=short&apikey=${omdbKey}`;
-//       axios.get(queryURL)
-//           .then((result) => {
-//               res.json(result.data);
-//           })
-//           .catch((err) => {
-//               console.log(err);
-//           })
-//   })
-
-// };
